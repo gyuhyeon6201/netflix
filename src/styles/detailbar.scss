@@ -14,6 +14,10 @@
 .detail-icon {
     font-size: 60px;
     // background: linear-gradient(45deg, #eb4a4a, #d87c47, #eb4a4a);
+    @include tablet {
+        margin-left: 1.5rem;
+        -webkit-text-stroke: 1px solid #250833;
+    }
 }
 .detail-txt {
     font-size: $font-medium;
