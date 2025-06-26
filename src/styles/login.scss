@@ -3,6 +3,12 @@
     z-index: 3;
     height: 100%;
     font-size: $font-small;
+    @include mobile {
+        font-size: $font-medium;
+        display: flex;
+        align-items: flex-start;
+        height: 60%
+    }
     @include flex-layout();
     .login-wrap {
         width: 500px;
@@ -24,28 +30,34 @@
         button:nth-of-type(1) {
             @include btn-style();
             width: 100%;
+            @include mobile {
+                font-size: $font-medium;
+            }
         }
-        .or{
+        .or {
             text-align: center;
         }
         button:nth-of-type(2) {
             @include btn-style(#666);
             width: 100%;
+            @include mobile {
+                font-size: $font-medium;
+            }
         }
-        a{
+        a {
             text-align: center;
             text-decoration: underline;
         }
-        label:nth-of-type(3){
+        label:nth-of-type(3) {
             display: flex;
             gap: 10px;
         }
-        .sign-up{
+        .sign-up {
             // text-align: center;
-            a{
+            a {
                 text-align: left;
             }
-            strong{
+            strong {
                 display: inline-block;
             }
         }
