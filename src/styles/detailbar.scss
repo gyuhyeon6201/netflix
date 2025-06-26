@@ -2,17 +2,18 @@
     @include flex-layout();
     gap: 2rem;
     transition: 0.5s;
-    @include tablet{
+    @include tablet {
         flex-direction: column;
         align-items: start;
         gap: 0;
     }
-    &:hover{
+    &:hover {
         transform: scale(1.1);
     }
 }
 .detail-icon {
     font-size: 60px;
+    // background: linear-gradient(45deg, #eb4a4a, #d87c47, #eb4a4a);
 }
 .detail-txt {
     font-size: $font-medium;
@@ -21,9 +22,8 @@
     background-image: linear-gradient(45deg, #250833, #170346);
     flex: 1;
     @include flex-layout(row);
-    @include tablet{
-        // width: 100%;
-        flex: 1;
+    @include tablet {
+        width: 100%;
         flex-direction: column;
         align-items: start;
         gap: 1rem;
@@ -55,7 +55,8 @@
                 50% 500% at 50% -420%,
                 rgba(64, 97, 231, 0.4) 30%,
                 rgba(16, 16, 16, 0.4) 100%
-            ), $bg-color;
+            ),
+            $bg-color;
     }
     .gradient-line {
         top: 0;

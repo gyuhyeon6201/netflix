@@ -2,10 +2,19 @@
     width: 60%;
     button{
         @include btn-style($main-color, $font-medium);
+        @include mobile{
+            width: 100px;
+            padding: 1rem;
+            margin: 0 auto;
+        }
     }
     div{
         @include flex-layout(row,space-between,stretch);
         gap: 1rem;
+        @include mobile{
+            flex-direction: column;
+            gap: 5rem;
+        }
     }
     // position을 이용하여 label을 기준으로 input과 span을 겹칠 것
     .email{
@@ -35,6 +44,7 @@
             font-size: 1.5rem;
             color: #666;
             top: 5px; // input안에 들어가는 문구 위치 조정
+            @include mobile{top: 10px;}
             left: 15px;
         }
         span.focused{
