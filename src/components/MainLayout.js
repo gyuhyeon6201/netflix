@@ -1,5 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
+import bg from "../assets/bg-image.jpg";
 import Footer from "./Footer";
 
 const MainLayout = () => {
