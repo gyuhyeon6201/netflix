@@ -1,0 +1,45 @@
+.membership{
+    width: 60%;
+    button{
+        @include btn-style($main-color, $font-medium);
+    }
+    div{
+        @include flex-layout(row,space-between,stretch);
+        gap: 1rem;
+    }
+    // position을 이용하여 label을 기준으로 input과 span을 겹칠 것
+    .email{
+        position: relative;
+        display: block;
+        flex: 1;
+        height: 100%;
+        input, span{
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: text; // I모양 커서
+        }
+        input{
+            color: $text-color;
+            padding: 10px;
+            padding-top: 30px;
+            border: 1px solid #fff;
+            // border: 1px solid $main-color;
+            border-radius: 5px;
+            background-color: transparent;
+            caret-color: #fff;
+        }
+        span{
+            font-size: 1.5rem;
+            color: #666;
+            top: 5px; // input안에 들어가는 문구 위치 조정
+            left: 15px;
+        }
+        span.focused{
+            font-size: 0.7rem;
+            top: 5px;
+        }
+    }
+}
